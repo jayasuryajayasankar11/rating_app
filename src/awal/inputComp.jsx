@@ -6,7 +6,7 @@ import { TextField } from "@mui/material";
 const CustomTextField = ({ label, required, placeholder }) => {
   return (
     <div className="flex flex-col gap-1">
-      <label className="text-sm font-medium">
+      <label className="text-[0.9rem] text-[#231F20]">
         {label} {required && "*"}
       </label>
       <TextField
@@ -15,11 +15,12 @@ const CustomTextField = ({ label, required, placeholder }) => {
         sx={{
           "& .MuiInputBase-input": {
             fontFamily: "MyFont",
-            fontSize: "14px",
+            fontSize: "12px",
+            fontWeight:"400"
           },
           "& .MuiInputBase-input::placeholder": {
             fontFamily: "MyFont",
-            color: "gray",
+            color: "#4F4C4D",
             opacity: 1,
           },
         }}

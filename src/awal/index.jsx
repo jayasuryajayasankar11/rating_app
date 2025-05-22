@@ -90,8 +90,16 @@ const AwalTab = () => {
               onChange={handleChange}
               aria-label="basic tabs example"
             >
-              <Tab label="Item One" {...a11yProps(0)} />
-              <Tab label="Item Two" {...a11yProps(1)} />
+              <Tab
+                label="Quick Leads"
+                {...a11yProps(0)}
+                sx={{ textTransform: "none" }}
+              />
+              <Tab
+                label="Sales Enquiry"
+                {...a11yProps(1)}
+                sx={{ textTransform: "none" }}
+              />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
