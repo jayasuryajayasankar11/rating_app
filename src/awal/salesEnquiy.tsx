@@ -1,5 +1,4 @@
-// src/components/LeadForm.tsx
-import React from 'react';
+import React from "react";
 import {
   TextField,
   MenuItem,
@@ -8,57 +7,149 @@ import {
   FormControl,
   Button,
   Typography,
-} from '@mui/material';
+} from "@mui/material";
 
 const LeadForm = () => {
+  const formFieldClass = "flex flex-col space-y-1";
+
   return (
-    <div className="bg-white h-[70vh] overflow-y-scroll p-5 space-y-8 rounded-md">
+    <div className="bg-white p-5 space-y-8 rounded-md">
       {/* General Information */}
       <div>
-        <Typography variant="h6" className="pb-2 border-b font-medium text-gray-900">General Information</Typography>
+        <Typography
+          variant="h6"
+          className="pb-2 border-b font-medium text-gray-900"
+        >
+          General Information
+        </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-          <TextField label="Customer Name *" variant="outlined" size="small" />
-          <TextField label="Building Number" variant="outlined" size="small" />
-          <TextField label="Road Number" variant="outlined" size="small" />
-          <TextField label="Area" variant="outlined" size="small" />
-          <TextField label="Telephone Number" variant="outlined" size="small" />
-          <TextField label="Mobile Number *" variant="outlined" size="small" />
-          <TextField label="Fax Number" variant="outlined" size="small" />
-          <TextField label="Email ID" variant="outlined" size="small" />
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Customer Name *</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Building Number</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Road Number</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Area</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Telephone Number</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Mobile Number *</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Fax Number</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Email ID</label>
+            <TextField variant="outlined" size="small" />
+          </div>
         </div>
       </div>
 
       {/* Project Information */}
       <div>
-        <Typography variant="h6" className="pb-2 border-b font-medium text-gray-900">Project</Typography>
+        <Typography
+          variant="h6"
+          className="pb-2 border-b font-medium text-gray-900"
+        >
+          Project
+        </Typography>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-          <TextField label="Project Name *" variant="outlined" size="small" />
-          <FormControl size="small">
-            <InputLabel>Project Mode</InputLabel>
-            <Select label="Project Mode">
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Project Name *</label>
+            <TextField variant="outlined" size="small" />
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Project Mode</label>
+            <Select size="small" displayEmpty value="">
               <MenuItem value="">Select Project Mode</MenuItem>
             </Select>
-          </FormControl>
-          <FormControl size="small">
-            <InputLabel>Cost Mode</InputLabel>
-            <Select label="Cost Mode">
+          </div>
+          <div className={formFieldClass}>
+            <label className="text-sm font-medium">Cost Mode</label>
+            <Select size="small" displayEmpty value="">
               <MenuItem value="">Select Cost Mode</MenuItem>
             </Select>
-          </FormControl>
+          </div>
         </div>
       </div>
 
-      {/* Add more sections below in the same pattern (Technical, Material Specification, etc.) */}
+      {/* Technical Information */}
+      <div>
+        <Typography
+          variant="h6"
+          className="pb-2 border-b font-medium text-gray-900"
+        >
+          Technical Information
+        </Typography>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          {[...Array(12)].map((_, i) => (
+            <div key={i} className={formFieldClass}>
+              <label className="text-sm font-medium">Field {i + 1}</label>
+              <TextField variant="outlined" size="small" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Material Specification */}
+      <div>
+        <Typography
+          variant="h6"
+          className="pb-2 border-b font-medium text-gray-900"
+        >
+          Material Specification
+        </Typography>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className={formFieldClass}>
+              <label className="text-sm font-medium">
+                Material Field {i + 1}
+              </label>
+              <TextField variant="outlined" size="small" />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Draw Section */}
       <div className="flex gap-4 mt-4">
-        <Button variant="contained" color="primary" startIcon={<img src="/leads/assets/svg/editlight.svg" />}>Draw</Button>
-        <Button variant="outlined" startIcon={<img src="/leads/assets/svg/keyBoard.svg" />}>Type</Button>
-        <Button variant="outlined" startIcon={<img src="/leads/assets/svg/Export.svg" />}>Upload</Button>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<img src="/leads/assets/svg/editlight.svg" />}
+        >
+          Draw
+        </Button>
+        <Button
+          variant="outlined"
+          startIcon={<img src="/leads/assets/svg/keyBoard.svg" />}
+        >
+          Type
+        </Button>
+        <Button
+          variant="outlined"
+          startIcon={<img src="/leads/assets/svg/Export.svg" />}
+        >
+          Upload
+        </Button>
       </div>
 
       {/* Notes Text Area */}
-      <div>
+      <div className={formFieldClass}>
+        <label className="text-sm font-medium">Notes</label>
         <textarea
           className="w-full border rounded p-2 text-sm"
           rows={6}
@@ -68,8 +159,12 @@ const LeadForm = () => {
 
       {/* Action Buttons */}
       <div className="flex justify-end gap-4">
-        <Button variant="outlined" color="secondary">Cancel</Button>
-        <Button variant="contained" color="primary">Create Lead</Button>
+        <Button variant="outlined" color="secondary">
+          Cancel
+        </Button>
+        <Button variant="contained" color="primary">
+          Create Lead
+        </Button>
       </div>
     </div>
   );
