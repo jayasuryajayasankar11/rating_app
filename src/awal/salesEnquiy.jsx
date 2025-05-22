@@ -20,7 +20,7 @@ const LeadForm = () => {
       <div>
         <Typography
           variant="h6"
-          className="pb-2 border-b font-medium text-gray-900"
+          className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]"
         >
           General Information
         </Typography>
@@ -84,7 +84,7 @@ const LeadForm = () => {
       <div>
         <Typography
           variant="h6"
-          className="pb-2 border-b font-medium text-gray-900"
+          className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]"
         >
           Project
         </Typography>
@@ -104,7 +104,7 @@ const LeadForm = () => {
             </CustomSelect>
           </div>
           <div className={formFieldClass}>
-          <CustomSelect value={""} label="Cost Mode">
+            <CustomSelect value={""} label="Cost Mode">
               <MenuItem value="">Select Cost Mode</MenuItem>
               <MenuItem value="online">Online</MenuItem>
               <MenuItem value="offline">Offline</MenuItem>
@@ -114,20 +114,178 @@ const LeadForm = () => {
       </div>
 
       {/* Technical Information */}
-      <div>
+      <div className="!bg-[#F2FDFF]">
         <Typography
           variant="h6"
-          className="pb-2 border-b font-medium text-gray-900"
+          className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
         >
           Technical Information
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className={formFieldClass}>
-              <label className="text-sm font-medium">Field {i + 1}</label>
-              <TextField variant="outlined" size="small" />
-            </div>
-          ))}
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Sign Type">
+              <MenuItem value="">Select Sign Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Material">
+              <MenuItem value="">Select Materials</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Material Thickness">
+              <MenuItem value="">Select Material Thickness</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Material Grade">
+              <MenuItem value="">Select Material Grade</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Type">
+              <MenuItem value="">Select Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Letter Return">
+              <MenuItem value="">Select Letter Return</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Profile">
+              <MenuItem value="">Select Profile</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Illumination Type">
+              <MenuItem value="">Select Illumination Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="ATM">
+              <MenuItem value="">Select ATM</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Media">
+              <MenuItem value="">Select Media</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Lamination">
+              <MenuItem value="">Select Lamination Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Digital Printing">
+              <MenuItem value="">Select Lamination Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Reflective">
+              <MenuItem value="">Select Reflective</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Embroidery">
+              <MenuItem value="">Select Embroidery</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Paint Finish">
+              <MenuItem value="">Select Cost Mode</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Maintenance">
+              <MenuItem value="">Select Cost Mode</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Cloth Type">
+              <MenuItem value="">Select Cloth Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={`${formFieldClass} col-span-3 `}>
+            <TextField
+              variant="outlined"
+              size="small"
+              sx={{
+                "& .MuiInputBase-input": {
+                  fontFamily: "MyFont",
+                  fontSize: "12px",
+                  fontWeight: "400",
+                },
+                "& .MuiInputBase-input::placeholder": {
+                  fontFamily: "MyFont",
+                  color: "#4F4C4D",
+                  opacity: 1,
+                },
+              }}
+              placeholder="Describe Cloth Type"
+            />
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Product Type">
+              <MenuItem value="">Select Product Type</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={`${formFieldClass} col-span-3 `}>
+            <TextField
+              variant="outlined"
+              size="small"
+              sx={{
+                "& .MuiInputBase-input": {
+                  fontFamily: "MyFont",
+                  fontSize: "12px",
+                  fontWeight: "400",
+                },
+                "& .MuiInputBase-input::placeholder": {
+                  fontFamily: "MyFont",
+                  color: "#4F4C4D",
+                  opacity: 1,
+                },
+              }}
+              placeholder="Describe Product Type"
+            />
+          </div>
         </div>
       </div>
 
@@ -135,19 +293,60 @@ const LeadForm = () => {
       <div>
         <Typography
           variant="h6"
-          className="pb-2 border-b font-medium text-gray-900"
+          className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
         >
           Material Specification
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className={formFieldClass}>
-              <label className="text-sm font-medium">
-                Material Field {i + 1}
-              </label>
-              <TextField variant="outlined" size="small" />
-            </div>
-          ))}
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="Previous Costing Estimation Number"
+              required
+              placeholder="Enter Estimation Number"
+            />
+          </div>
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="Quotation Number"
+              required
+              placeholder="Enter Quotation Number"
+            />
+          </div>
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="LPO Number"
+              required
+              placeholder="Enter LPO Number"
+            />
+          </div>
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="Competitor (If Any)"
+              required
+              placeholder="Enter Here"
+            />
+          </div>
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="Other Specific Information"
+              required
+              placeholder="Enter Here"
+            />
+          </div>
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="Height of Installation in Mtrs "
+              required
+              placeholder="Enter in Mtrs"
+            />
+          </div>
+        <div className={formFieldClass}>
+            <CustomTextField
+              label="Previous Costing Estimation Number"
+              required
+              placeholder="Enter Estimation Number"
+            />
+          </div>
         </div>
       </div>
 
