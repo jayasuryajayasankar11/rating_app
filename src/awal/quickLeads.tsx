@@ -1,15 +1,21 @@
 import { Button, MenuItem, Select, TextField, Typography } from "@mui/material";
 import React from "react";
+import exportIcon from "../awal/assets/svg/ExportBlue.svg";
 
 const QuickLeads = () => {
   const formFieldClass = "flex flex-col space-y-1";
   return (
     <div className="">
       <div className="bg-white rounded-md p-6 shadow-md ">
-        <div className="flex justify-between items-center mb-6 border-b pb-2">
+        <div className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]">
           <Typography variant="h6">Quick Leads Creation</Typography>
-          <Button variant="outlined" color="primary" size="small">
-            Export To Enquiry
+          <Button
+            variant="outlined"
+            size="small"
+            className="text-[#0070B9] !normal-case !border-[#0070B9]"
+          >
+            Export To Enquiry{" "}
+            <img src={exportIcon} alt="export" className="mx-1" />
           </Button>
         </div>
 
@@ -30,8 +36,8 @@ const QuickLeads = () => {
           </div>
           <div className={formFieldClass}>
             <label className="text-sm font-medium">Value</label>
-            <div className="flex gap-2">
-              <Select size="small" value="BHD">
+            <div className="flex gap-2 ">
+              <Select size="small" value="BHD" sx={{fontSize:"0.8rem" , color:"#4F4C4D"}}>
                 <MenuItem value="BHD">BHD</MenuItem>
               </Select>
               <TextField size="small" placeholder="Enter" />
@@ -39,13 +45,13 @@ const QuickLeads = () => {
           </div>
           <div className={formFieldClass}>
             <label className="text-sm font-medium">Pipeline</label>
-            <Select size="small" value="Pipeline">
+            <Select size="small" value="Pipeline" sx={{fontSize:"0.8rem" , color:"#4F4C4D"}}>
               <MenuItem value="Pipeline">Pipeline</MenuItem>
             </Select>
           </div>
           <div className={formFieldClass}>
             <label className="text-sm font-medium">Owner</label>
-            <Select size="small" value="Prashant Shankar Gouli">
+            <Select size="small" value="Prashant Shankar Gouli" sx={{fontSize:"0.8rem" , color:"#4F4C4D"}}>
               <MenuItem value="Prashant Shankar Gouli">
                 Prashant Shankar Gouli
               </MenuItem>
@@ -57,19 +63,21 @@ const QuickLeads = () => {
           </div>
           <div className={formFieldClass}>
             <label className="text-sm font-medium">Visible To</label>
-            <Select size="small" value="Item Owner’s Visibility Group">
-              <MenuItem value="Item Owner’s Visibility Group">
-                Item Owner’s Visibility Group
+            <Select size="small" value="Item Owner's Visibility Group">
+              <MenuItem value="Item Owner's Visibility Group">
+                Item Owner's Visibility Group
               </MenuItem>
             </Select>
           </div>
         </div>
 
-        <Typography variant="h6" className="mb-4">
-          Person
-        </Typography>
+        <div className="mb-6 border-b pb-1 border-[#e5e9eb]">
+          <Typography variant="h6" className="mb-4">
+            Person
+          </Typography>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 items-center">
           <div className={formFieldClass}>
             <label className="text-sm font-medium">
               Phone <span className="text-red-500">*</span>
@@ -78,12 +86,12 @@ const QuickLeads = () => {
             <Button
               size="small"
               variant="text"
-              className="self-start text-xs mt-1"
+              className="self-start !text-[0.6rem] mt-1"
             >
               + Add Phone
             </Button>
           </div>
-          <div className="flex items-end">
+          <div className="flex items-end !w-[100%]">
             <Select size="small" value="Work">
               <MenuItem value="Work">Work</MenuItem>
             </Select>
@@ -94,7 +102,7 @@ const QuickLeads = () => {
             <Button
               size="small"
               variant="text"
-              className="self-start text-xs mt-1"
+              className="self-start !text-[0.6rem] mt-1"
             >
               + Add Email
             </Button>
