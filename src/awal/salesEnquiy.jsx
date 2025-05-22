@@ -10,6 +10,9 @@ import {
 } from "@mui/material";
 import CustomTextField from "./inputComp";
 import CustomSelect from "./selectComp";
+import edit from "./assets/svg/editlight.svg";
+import keyBoard from "./assets/svg/keyBoard.svg";
+import Export from "./assets/svg/Export.svg";
 
 const LeadForm = () => {
   const formFieldClass = "flex flex-col space-y-1";
@@ -17,7 +20,7 @@ const LeadForm = () => {
   return (
     <div className="bg-white p-5 space-y-8 rounded-md">
       {/* General Information */}
-      <div>
+      <div className=" px-4">
         <Typography
           variant="h6"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]"
@@ -35,24 +38,21 @@ const LeadForm = () => {
           <div className={formFieldClass}>
             <CustomTextField
               label="Building Name"
-              required
               placeholder="Enter Building Name"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Road Number"
-              required
               placeholder="Enter Road Number"
             />
           </div>
           <div className={formFieldClass}>
-            <CustomTextField label="Area" required placeholder="Enter Area" />
+            <CustomTextField label="Area" placeholder="Enter Area" />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Telephone Number"
-              required
               placeholder="Enter Telephone Number"
             />
           </div>
@@ -66,22 +66,17 @@ const LeadForm = () => {
           <div className={formFieldClass}>
             <CustomTextField
               label="Fax Number"
-              required
               placeholder="Enter Fax Number"
             />
           </div>
           <div className={formFieldClass}>
-            <CustomTextField
-              label="Email ID"
-              required
-              placeholder="Enter Email ID"
-            />
+            <CustomTextField label="Email ID" placeholder="Enter Email ID" />
           </div>
         </div>
       </div>
 
       {/* Project Information */}
-      <div>
+      <div className=" px-4">
         <Typography
           variant="h6"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]"
@@ -114,14 +109,14 @@ const LeadForm = () => {
       </div>
 
       {/* Technical Information */}
-      <div className="!bg-[#F2FDFF]">
+      <div className="!bg-[#F2FDFF] px-4">
         <Typography
           variant="h6"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
         >
           Technical Information
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 items-end ">
           <div className={formFieldClass}>
             <CustomSelect value={""} label="Sign Type">
               <MenuItem value="">Select Sign Type</MenuItem>
@@ -290,7 +285,7 @@ const LeadForm = () => {
       </div>
 
       {/* Material Specification */}
-      <div>
+      <div className=" px-4">
         <Typography
           variant="h6"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
@@ -298,49 +293,49 @@ const LeadForm = () => {
           Material Specification
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="Previous Costing Estimation Number"
               required
               placeholder="Enter Estimation Number"
             />
           </div>
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="Quotation Number"
               required
               placeholder="Enter Quotation Number"
             />
           </div>
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="LPO Number"
               required
               placeholder="Enter LPO Number"
             />
           </div>
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="Competitor (If Any)"
               required
               placeholder="Enter Here"
             />
           </div>
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="Other Specific Information"
               required
               placeholder="Enter Here"
             />
           </div>
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="Height of Installation in Mtrs "
               required
               placeholder="Enter in Mtrs"
             />
           </div>
-        <div className={formFieldClass}>
+          <div className={formFieldClass}>
             <CustomTextField
               label="Previous Costing Estimation Number"
               required
@@ -351,30 +346,24 @@ const LeadForm = () => {
       </div>
 
       {/* Draw Section */}
-      <div className="flex gap-4 mt-4">
+      <div className="flex gap-4 mt-4  px-4">
         <Button
           variant="contained"
           color="primary"
-          startIcon={<img src="/leads/assets/svg/editlight.svg" />}
+          startIcon={<img src={edit} />}
         >
           Draw
         </Button>
-        <Button
-          variant="outlined"
-          startIcon={<img src="/leads/assets/svg/keyBoard.svg" />}
-        >
+        <Button variant="outlined" startIcon={<img src={keyBoard} />}>
           Type
         </Button>
-        <Button
-          variant="outlined"
-          startIcon={<img src="/leads/assets/svg/Export.svg" />}
-        >
+        <Button variant="outlined" startIcon={<img src={Export} />}>
           Upload
         </Button>
       </div>
 
       {/* Notes Text Area */}
-      <div className={formFieldClass}>
+      <div className={`${formFieldClass}  px-4`}>
         <label className="text-sm font-medium">Notes</label>
         <textarea
           className="w-full border rounded p-2 text-sm"
@@ -385,10 +374,13 @@ const LeadForm = () => {
 
       {/* Action Buttons */}
       <div className="flex justify-end gap-4">
-        <Button variant="outlined" color="secondary">
+        <Button
+          variant="outlined"
+          className="!text-[#0070B9] !border-[#0070B9] !normal-case"
+        >
           Cancel
         </Button>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" className=" !bg-[#0070B9] !normal-case">
           Create Lead
         </Button>
       </div>

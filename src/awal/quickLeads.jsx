@@ -67,6 +67,7 @@ const QuickLeads = () => {
                     opacity: 1,
                   },
                 }}
+                fullWidth
               />
             </div>
           </div>

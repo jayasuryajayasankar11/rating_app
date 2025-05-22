@@ -12,7 +12,7 @@ const CustomSelect = ({ children, label }) => {
           displayEmpty
           sx={{
             fontFamily: "MyFont",
-            fontSize: "14px",
+            fontSize: "12px",
             "& .MuiSelect-select": {
               fontFamily: "MyFont",
               fontSize: "14px",
