@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import CustomTextField from "./inputComp";
+import CustomSelect from "./selectComp";
 
 const LeadForm = () => {
   const formFieldClass = "flex flex-col space-y-1";
@@ -32,49 +33,45 @@ const LeadForm = () => {
             />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Building Name"
               required
               placeholder="Enter Building Name"
             />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Road Number"
               required
               placeholder="Enter Road Number"
             />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
-              label="Area"
-              required
-              placeholder="Enter Area"
-            />
+            <CustomTextField label="Area" required placeholder="Enter Area" />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Telephone Number"
               required
               placeholder="Enter Telephone Number"
             />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Mobile Number"
               required
               placeholder="Enter Mobile Name"
             />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Fax Number"
               required
               placeholder="Enter Fax Number"
             />
           </div>
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Email ID"
               required
               placeholder="Enter Email ID"
@@ -91,25 +88,27 @@ const LeadForm = () => {
         >
           Project
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
           <div className={formFieldClass}>
-          <CustomTextField
+            <CustomTextField
               label="Project Name"
               required
               placeholder="Enter Project Name"
             />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Project Mode</label>
-            <Select size="small" displayEmpty value="">
+            <CustomSelect value={""} label="Project Mode">
               <MenuItem value="">Select Project Mode</MenuItem>
-            </Select>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Cost Mode</label>
-            <Select size="small" displayEmpty value="">
+          <CustomSelect value={""} label="Cost Mode">
               <MenuItem value="">Select Cost Mode</MenuItem>
-            </Select>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
           </div>
         </div>
       </div>
