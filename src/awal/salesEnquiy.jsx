@@ -109,7 +109,7 @@ const LeadForm = () => {
       </div>
 
       {/* Technical Information */}
-      <div className="!bg-[#F2FDFF] px-4">
+      <div className="!bg-[#F2FDFF] p-4">
         <Typography
           variant="h6"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
@@ -337,10 +337,129 @@ const LeadForm = () => {
           </div>
           <div className={formFieldClass}>
             <CustomTextField
-              label="Previous Costing Estimation Number"
+              label="Surface of Installation"
               required
-              placeholder="Enter Estimation Number"
+              placeholder="Enter Surface of Installation"
             />
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Time Of Installation">
+              <MenuItem value="">Select Time Of Installation</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Choose Permit Requirement">
+              <MenuItem value="">Select Permit Requirement</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Removable Of Existing Sign">
+              <MenuItem value="">Select</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={`${formFieldClass} col-span-2`}>
+            <CustomTextField
+              label="If(Yes) Please Describe"
+              required
+              placeholder="Describe Here"
+            />
+          </div>
+
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Installation Equipment">
+              <MenuItem value="">Select Installation Equipment</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Power Availability">
+              <MenuItem value="">Select Power Availability</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Generator Required">
+              <MenuItem value="">Select Generator Required</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Delivery">
+              <MenuItem value="">Select Delivery</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Packaging">
+              <MenuItem value="">Select Packaging</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Palette">
+              <MenuItem value="">Select Palette</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Logistics Transportation">
+              <MenuItem value="">Select Logistics Transportation</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Specify Mode">
+              <MenuItem value="">Select Mode</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Unboxing Facility At Site">
+              <MenuItem value="">Select</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+        </div>
+      </div>
+
+      {/* Commercial */}
+
+      <div className="!bg-[#F2FDFF] p-4">
+        <Typography
+          variant="h6"
+          className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
+        >
+          Commercial Information
+        </Typography>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Terms Of Payment">
+              <MenuItem value="">Select Terms Of Payment</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
+          </div>
+          <div className={formFieldClass}>
+            <CustomSelect value={""} label="Price Mode">
+              <MenuItem value="">Select Price Mode</MenuItem>
+              <MenuItem value="online">Online</MenuItem>
+              <MenuItem value="offline">Offline</MenuItem>
+            </CustomSelect>
           </div>
         </div>
       </div>
@@ -354,10 +473,10 @@ const LeadForm = () => {
         >
           Draw
         </Button>
-        <Button variant="outlined" startIcon={<img src={keyBoard} />}>
+        <Button variant="text" endIcon={<img src={keyBoard} />} className="!text-black !font-medium !normal-case" >
           Type
         </Button>
-        <Button variant="outlined" startIcon={<img src={Export} />}>
+        <Button variant="text" endIcon={<img src={Export} />} className="!text-black !font-medium !normal-case">
           Upload
         </Button>
       </div>
