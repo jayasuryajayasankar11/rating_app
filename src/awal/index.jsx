@@ -7,6 +7,12 @@ import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
 import QuickLeads from "./quickLeads";
 import LeadForm from "./salesEnquiy";
+import printImg from "../awal/assets/svg/print.svg";
+import periodImg from "../awal/assets/svg/Calendar.svg";
+import downImg from "../awal/assets/svg/Down.svg";
+import userImg from "../awal/assets/svg/User.svg";
+import exportImg from "../awal/assets/svg/Export.svg";
+import shareImg from "../awal/assets/svg/Share.svg";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,14 +51,35 @@ const AwalTab = () => {
   };
 
   return (
-    <div className="!p-[1rem]">
+    <div className="!p-[1rem] bg-[#F0F1F7] h-[100vh]">
       <div className="w-[100%] flex justify-between">
         <div>
           <ArrowBackIcon />
           Leads Creation
         </div>
-        <div>
-          <Button variant="contained">Print</Button>
+        <div className="flex gap-3 !pr-[1.4rem]">
+          <button className="bg-white border border-gray-300 px-3 py-1.5 rounded text-sm text-[#231f20] hover:bg-[#f0f0f0] flex items-center gap-2">
+            Print
+            <img src={printImg} alt="print" />
+          </button>
+          <button className="bg-white border border-gray-300 px-3 py-1.5 rounded text-sm text-[#231f20] hover:bg-[#f0f0f0] flex items-center gap-2">
+            <img src={periodImg} alt="print" />
+            Period
+            <img src={downImg} alt="print" />
+          </button>
+          <button className="bg-white border border-gray-300 px-3 py-1.5 rounded text-sm text-[#231f20] hover:bg-[#f0f0f0] flex items-center gap-2">
+            <img src={userImg} alt="print" />
+            User
+            <img src={downImg} alt="print" />
+          </button>
+          <button className="bg-white border border-gray-300 px-3 py-1.5 rounded text-sm text-[#231f20] hover:bg-[#f0f0f0] flex items-center gap-2">
+            Share
+            <img src={shareImg} alt="print" />
+          </button>
+          <button className="bg-white border border-gray-300 px-3 py-1.5 rounded text-sm text-[#231f20] hover:bg-[#f0f0f0] flex items-center gap-2">
+            Export
+            <img src={exportImg} alt="print" />
+          </button>
         </div>
       </div>
       <div>
