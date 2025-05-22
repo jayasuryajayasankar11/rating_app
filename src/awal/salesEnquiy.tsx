@@ -8,6 +8,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
+import CustomTextField from "./inputComp";
 
 const LeadForm = () => {
   const formFieldClass = "flex flex-col space-y-1";
@@ -24,36 +25,60 @@ const LeadForm = () => {
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Customer Name *</label>
-            <TextField variant="outlined" size="small" />
+            <CustomTextField
+              label="Customer Name"
+              required
+              placeholder="Enter Customer Name"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Building Number</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Building Name"
+              required
+              placeholder="Enter Building Name"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Road Number</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Road Number"
+              required
+              placeholder="Enter Road Number"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Area</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Area"
+              required
+              placeholder="Enter Area"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Telephone Number</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Telephone Number"
+              required
+              placeholder="Enter Telephone Number"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Mobile Number *</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Mobile Number"
+              required
+              placeholder="Enter Mobile Name"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Fax Number</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Fax Number"
+              required
+              placeholder="Enter Fax Number"
+            />
           </div>
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Email ID</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Email ID"
+              required
+              placeholder="Enter Email ID"
+            />
           </div>
         </div>
       </div>
@@ -68,8 +93,11 @@ const LeadForm = () => {
         </Typography>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <div className={formFieldClass}>
-            <label className="text-sm font-medium">Project Name *</label>
-            <TextField variant="outlined" size="small" />
+          <CustomTextField
+              label="Project Name"
+              required
+              placeholder="Enter Project Name"
+            />
           </div>
           <div className={formFieldClass}>
             <label className="text-sm font-medium">Project Mode</label>
