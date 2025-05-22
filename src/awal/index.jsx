@@ -6,6 +6,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
 import QuickLeads from "./quickLeads";
+import LeadForm from "./salesEnquiy";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -70,7 +71,7 @@ const AwalTab = () => {
             <QuickLeads />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
-            Item Two
+            <LeadForm />
           </CustomTabPanel>
         </Box>
       </div>
