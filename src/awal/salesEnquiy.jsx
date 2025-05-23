@@ -18,16 +18,16 @@ const LeadForm = () => {
   const formFieldClass = "flex flex-col space-y-1";
 
   return (
-    <div className="bg-white p-5 space-y-8 rounded-md">
+    <div className="bg-white !py-5 space-y-8 rounded-md shadow-md overflow-y-scroll h-[70vh]">
       {/* General Information */}
-      <div className=" px-4">
+      <div className=" px-7">
         <Typography
-          variant="h6"
+          variant="h9"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]"
         >
           General Information
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
           <div className={formFieldClass}>
             <CustomTextField
               label="Customer Name"
@@ -76,18 +76,17 @@ const LeadForm = () => {
       </div>
 
       {/* Project Information */}
-      <div className=" px-4">
+      <div className=" px-7">
         <Typography
-          variant="h6"
+          variant="h9"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb]"
         >
           Project
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-4">
           <div className={formFieldClass}>
             <CustomTextField
               label="Project Name"
-              required
               placeholder="Enter Project Name"
             />
           </div>
@@ -111,12 +110,12 @@ const LeadForm = () => {
       {/* Technical Information */}
       <div className="!bg-[#F2FDFF] p-4">
         <Typography
-          variant="h6"
+          variant="h9"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
         >
           Technical Information
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 items-end ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 items-end ">
           <div className={formFieldClass}>
             <CustomSelect value={""} label="Sign Type">
               <MenuItem value="">Select Sign Type</MenuItem>
@@ -242,12 +241,12 @@ const LeadForm = () => {
               size="small"
               sx={{
                 "& .MuiInputBase-input": {
-                  fontFamily: "MyFont",
+                  // fontFamily: "MyFont",
                   fontSize: "12px",
                   fontWeight: "400",
                 },
                 "& .MuiInputBase-input::placeholder": {
-                  fontFamily: "MyFont",
+                  // fontFamily: "MyFont",
                   color: "#4F4C4D",
                   opacity: 1,
                 },
@@ -268,12 +267,12 @@ const LeadForm = () => {
               size="small"
               sx={{
                 "& .MuiInputBase-input": {
-                  fontFamily: "MyFont",
+                  // fontFamily: "MyFont",
                   fontSize: "12px",
                   fontWeight: "400",
                 },
                 "& .MuiInputBase-input::placeholder": {
-                  fontFamily: "MyFont",
+                  // fontFamily: "MyFont",
                   color: "#4F4C4D",
                   opacity: 1,
                 },
@@ -285,60 +284,53 @@ const LeadForm = () => {
       </div>
 
       {/* Material Specification */}
-      <div className=" px-4">
+      <div className=" px-7">
         <Typography
-          variant="h6"
+          variant="h9"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
         >
           Material Specification
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
           <div className={formFieldClass}>
             <CustomTextField
               label="Previous Costing Estimation Number"
-              required
               placeholder="Enter Estimation Number"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Quotation Number"
-              required
               placeholder="Enter Quotation Number"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="LPO Number"
-              required
               placeholder="Enter LPO Number"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Competitor (If Any)"
-              required
               placeholder="Enter Here"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Other Specific Information"
-              required
               placeholder="Enter Here"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Height of Installation in Mtrs "
-              required
               placeholder="Enter in Mtrs"
             />
           </div>
           <div className={formFieldClass}>
             <CustomTextField
               label="Surface of Installation"
-              required
               placeholder="Enter Surface of Installation"
             />
           </div>
@@ -366,7 +358,6 @@ const LeadForm = () => {
           <div className={`${formFieldClass} col-span-2`}>
             <CustomTextField
               label="If(Yes) Please Describe"
-              required
               placeholder="Describe Here"
             />
           </div>
@@ -441,12 +432,12 @@ const LeadForm = () => {
 
       <div className="!bg-[#F2FDFF] p-4">
         <Typography
-          variant="h6"
+          variant="h9"
           className="flex justify-between items-center mb-6 border-b pb-1 border-[#e5e9eb] "
         >
           Commercial Information
         </Typography>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
           <div className={formFieldClass}>
             <CustomSelect value={""} label="Terms Of Payment">
               <MenuItem value="">Select Terms Of Payment</MenuItem>
@@ -465,37 +456,46 @@ const LeadForm = () => {
       </div>
 
       {/* Draw Section */}
-      <div className="flex gap-4 mt-4  px-4">
+      <div className="flex gap-4 mt-4  px-7">
         <Button
           variant="contained"
           color="primary"
           startIcon={<img src={edit} />}
+          className="!py-[0px]"
         >
           Draw
         </Button>
-        <Button variant="text" endIcon={<img src={keyBoard} />} className="!text-black !font-medium !normal-case" >
+        <Button
+          variant="text"
+          endIcon={<img src={keyBoard} />}
+          className="!text-black !font-medium !normal-case"
+        >
           Type
         </Button>
-        <Button variant="text" endIcon={<img src={Export} />} className="!text-black !font-medium !normal-case">
+        <Button
+          variant="text"
+          endIcon={<img src={Export} />}
+          className="!text-black !font-medium !normal-case"
+        >
           Upload
         </Button>
       </div>
 
       {/* Notes Text Area */}
-      <div className={`${formFieldClass}  px-4`}>
-        <label className="text-sm font-medium">Notes</label>
+      <div className={`${formFieldClass}  px-7`}>
+        {/* <label className="text-sm font-medium">Notes</label> */}
         <textarea
-          className="w-full border rounded p-2 text-sm"
+          className="w-full border rounded p-2 text-sm "
           rows={6}
-          placeholder="Enter additional notes here..."
+          // placeholder="Enter additional notes here..."
         ></textarea>
       </div>
 
       {/* Action Buttons */}
-      <div className="flex justify-end gap-4">
+      <div className="flex justify-end gap-4 px-7">
         <Button
-          variant="outlined"
-          className="!text-[#0070B9] !border-[#0070B9] !normal-case"
+          variant="text"
+          className="!text-[black] !bg-[#e4e2e2] !normal-case !px-[0.8rem]"
         >
           Cancel
         </Button>

@@ -1,6 +1,6 @@
 /* src/assets/fonts/fonts.css */
 
-@font-face {
+/* @font-face {
     font-family: 'MyFont';
     src: url('./fonts/MuseoSans-100.otf') format('opentype');
     font-weight: 100;
@@ -25,4 +25,35 @@
 
     font-family: 'MyFont', sans-serif;
 
+} */
+
+@import url("https://use.typekit.net/wem2dhz.css");
+
+* {
+    font-family: "museo-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+/* Webkit Scrollbar */
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1;
+    border-radius: 10px;
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d1d1 transparent;
+}
+
+/* END: Table & Scrollbars */
